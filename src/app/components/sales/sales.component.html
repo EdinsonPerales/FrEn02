@@ -1,0 +1,102 @@
+<div class='card mr-2 ml-2'>
+    <div class='card-header'>
+        <h3>Usuario: Edinson Perales</h3>
+    </div>
+</div>
+<div class="searchForm mr-5 ml-5 mt-2">
+    <div class="card text-center">
+        <h5 class="card-header">Búsqueda de productos</h5>
+        <div class="card-body">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="exampleFormControlSelect1">Producto: </label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="category" name="category" required (change)="selectCategory($event)">
+                            <option></option>
+                            <option *ngFor="let category of categories" [value]="category.idCategory">{{ category.name }}</option>
+                            
+                        </select>
+
+                    </div>
+                    <!-- <div class="col">
+                        <label for="exampleFormControlSelect1">Marca: </label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option ></option>
+                            <option *ngFor="let brand of brands" [value]="brand.idBrand">{{ brand.name }}</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="exampleFormControlSelect1">Talla: </label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option ></option>
+                            <option *ngFor="let size of sizes" [value]="size.idSize">{{ size.name }}</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <span>Productos que coinciden con la búsqueda:</span>
+                    </div>
+                </div>
+                <div class="row rowSearchProduct">
+                    <div class="col colSearchProduct">
+                        <div class="tableSearchProduct mt-2">
+                            <table class="table table-bordered table-striped">
+                                <thead class="headSalesForm">
+                                    <tr class="bg-dark">
+                                        <th class="thTableSearchProduct" scope="col">Producto</th>
+                                        <th class="thTableSearchProduct" scope="col">Marca</th>
+                                        <th class="thTableSearchProduct" scope="col">Talla</th>
+                                        <th class="thTableSearchProduct" scope="col">Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let selectC of Clothesre">
+                                        <th scope="row"> {{selectC.idCategory}} </th>
+                                        <td> {{selectC.idBrand}} </td>
+                                        <td> {{selectC.idSize}} </td>
+                                        <td> {{selectC.stock}} </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="btn btn-dark mt-3">Seleccionar Producto</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="salesForm mt-2">
+    <table class="table table-bordered">
+        <thead class="headSalesForm">
+            <tr class="bg-dark">
+                <th scope="col">Código</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio unitario</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1123</th>
+                <td>Polo Niño</td>
+                <td>1</td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container text-center m-5">
+    <button type="button" class="btn btn-dark ">Guardar Venta</button>
+</div>
