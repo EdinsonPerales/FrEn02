@@ -25,7 +25,7 @@ nav {
 body {
     margin: 0;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
+    font-size: 0.8rem !important;
     font-weight: 400;
     line-height: 1.5;
     color: #515151;
@@ -129,7 +129,7 @@ thead tr th {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1.25rem;
+    padding: 1rem;
 }
 
 .card-header {
@@ -162,7 +162,7 @@ thead tr th {
     -webkit-flex-grow: 2;
     -ms-flex-positive: 2;
     flex-grow: 2;
-    margin-top: 84px;
+    margin-top: 40px;
 }
 
 .dashboard-content {
@@ -227,6 +227,8 @@ thead tr th {
 
 .dashboard-nav {
     background-color: #443ea2;
+    /* background-color: #343a40;
+    background-color: #d1b280; */
 }
 
 .dashboard-nav a {
@@ -415,7 +417,7 @@ thead tr th {
 }
 
 .dashboard-toolbar {
-    min-height: 84px;
+    min-height: 50px;
     background-color: #dfdfdf;
     display: -webkit-box;
     display: -webkit-flex;
@@ -456,19 +458,90 @@ thead tr th {
     justify-content: center;
 }
 
-.rowSearchProduct .colSearchProduct {
-    flex-grow: 0.5;
-}
-
 .tableSearchProduct {
     overflow: auto;
-    height: 200px;
+    height: 350px;
+}
+
+.table-produt-prices {
+    overflow: auto;
+    height: 190px;
 }
 
 .thTableSearchProduct {
     position: sticky;
     top: 0px;
     background-color: #343a40;
+}
+
+.sales-container {
+    margin: 0 auto;
+    width: 95%;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 28% 36% 36%;
+    grid-template-columns: 75% 25%;
+    /* align-items: center; */
+}
+
+.sales-item {
+    padding: 1rem;
+    /* font-size: 1rem; */
+    /* background-color: white;
+    border: medium solid black; */
+}
+
+.sales-container .sales-item:nth-child(3) {
+    grid-row: span 2;
+    grid-column: span 1;
+}
+
+.sales-detail-container {
+    margin: 0 auto;
+    width: 95%;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-columns: 50% 50%;
+    font-size: 0.8rem;
+    /* justify-content: center; 
+     align-items: center; */
+}
+
+.sales-detail-item {
+    padding: 0.5rem;
+    /* background-color: white;
+    border: medium solid black; */
+}
+
+.sales-detail-container .sales-detail-item:nth-child(1) {
+    grid-column: span 2;
+    justify-self: center;
+    width: 65%;
+    /* grid-column: 80%;*/
+}
+
+.sales-detail-container .sales-detail-item:nth-child(2) {
+    grid-row: span 2;
+    grid-column: span 1;
+    /* grid-column: 80%;*/
+}
+
+.sales-detail-container .sales-detail-item:nth-child(4) {
+    padding-top: 0;
+    /* grid-column: 80%;*/
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-control {
+    font-size: .8rem;
+}
+
+.btn {
+    font-size: 0.8rem;
 }
 
 @media (min-width: 992px) {
